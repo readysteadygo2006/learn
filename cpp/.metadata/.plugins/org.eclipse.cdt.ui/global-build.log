@@ -1,0 +1,10 @@
+22:37:07 **** Incremental Build of configuration Debug for project smartptr ****
+make all 
+Building file: ../src/smartptr.cpp
+Invoking: GCC C++ Compiler
+g++ -D__GXX_EXPERIMENTAL_CXX0X__ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/smartptr.d" -MT"src/smartptr.d" -o "src/smartptr.o" "../src/smartptr.cpp"
+../src/smartptr.cpp: In function ‘int main()’:
+../src/smartptr.cpp:27:41: error: converting to ‘std::unique_ptr<Hen>’ from initializer list would use explicit constructor ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(std::unique_ptr<_Tp, _Dp>::pointer) [with _Tp = Hen; _Dp = std::default_delete<Hen>; std::unique_ptr<_Tp, _Dp>::pointer = Hen*]’
+  unique_ptr<Hen> hen = {new Hen(1, 5.6f)};
+                                         ^
+make: *** [src/smartptr.o] Error 1

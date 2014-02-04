@@ -1,0 +1,24 @@
+//============================================================================
+// Name        : smartptr.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <memory>
+using namespace std;
+
+int main() {
+
+	auto sp_auto = unique_ptr<int> {new int(123) };
+
+	unique_ptr<int> sp_explicit(new int(456));
+
+	unique_ptr<int> sp_new;
+
+
+	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	return 0;
+}
